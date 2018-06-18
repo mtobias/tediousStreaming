@@ -7,7 +7,7 @@ There are 2 implementations:
 * [tedious](https://github.com/tediousjs/tedious) [stream](./tedious/index.js)
 * [node-mssql](https://github.com/tediousjs/node-mssql) [stream](./mssql/index.js)
 
-_node-mssql_ use tedious under the hood.
+_node-mssql_ use _tedious_ under the hood.
 
 Script output:
 
