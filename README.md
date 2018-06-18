@@ -12,11 +12,12 @@ _node-mssql_ use _tedious_ under the hood.
 
 
 When use _**node-mssql**_ implementations make sure [this commit](https://github.com/danbeck/node-mssql/commit/c6894ee97c452a2b69fe0610a953d210884eb6db#diff-740c6ca62b823be279cef39ece34cf7e) is in the source.
+
 In [writer.js](./writer.js) creates write stream with 3 arguments:
 
 * `highWaterMark`
 
-* ` delay to process chunk of data`
+* `delay to process chunk of data`
 
 * `complete callback`
 
@@ -32,7 +33,8 @@ In [writer.js](./writer.js) creates write stream with 3 arguments:
     //get data, group it and write
     readableStream.pipe(batcher).pipe(wStream);
 ```
-Script output:
+
+On every `writes` script prints current memory usage:
 
 ```
 The script uses approximately 23.65 MB and proceed 1900 rows
