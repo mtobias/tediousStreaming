@@ -9,6 +9,29 @@ There are 2 implementations:
 
 _node-mssql_ use _tedious_ under the hood.
 
+
+
+When use _**node-mssql**_ implementations make sure [this commit](https://github.com/danbeck/node-mssql/commit/c6894ee97c452a2b69fe0610a953d210884eb6db#diff-740c6ca62b823be279cef39ece34cf7e) is in the source.
+In [writer.js](./writer.js) creates write stream with 3 arguments:
+
+* `highWaterMark`
+
+* ` delay to process chunk of data`
+
+* `complete callback`
+
+```js
+ const wStream = CreateWStream(10, 50, (err) => {
+        if (err) {
+            console.error(err);
+            process.exit(1)
+        }
+        console.log('ready')
+
+    });
+    //get data, group it and write
+    readableStream.pipe(batcher).pipe(wStream);
+```
 Script output:
 
 ```
@@ -33,5 +56,3 @@ The script uses approximately 13.33 MB and proceed 2070 rows
 The script uses approximately 13.33 MB and proceed 2080 rows
 The script uses approximately 13.33 MB and proceed 2090 rows
 ```
-
-When use _**node-mssql**_ implementations make sure [this commit](https://github.com/danbeck/node-mssql/commit/c6894ee97c452a2b69fe0610a953d210884eb6db#diff-740c6ca62b823be279cef39ece34cf7e) is in the source.

@@ -12,10 +12,6 @@ const startWriter = (readableStream) => {
         console.log('ready')
 
     });
-    batcher.on('error', (err) => {
-        console.error(err);
-        process.exit(1)
-    });
     //get data, group it and write
     readableStream.pipe(batcher).pipe(wStream);
 };
