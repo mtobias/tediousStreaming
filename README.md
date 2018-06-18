@@ -7,7 +7,7 @@ There are 2 implementations:
 * [tedious](https://github.com/tediousjs/tedious) [stream](./tedious/index.js)
 * [node-mssql](https://github.com/tediousjs/node-mssql) [stream](./mssql/index.js)
 
-node-mssql use tedious under the hood.
+_node-mssql_ use tedious under the hood.
 
 Script output:
 
@@ -33,3 +33,5 @@ The script uses approximately 13.33 MB and proceed 2070 rows
 The script uses approximately 13.33 MB and proceed 2080 rows
 The script uses approximately 13.33 MB and proceed 2090 rows
 ```
+
+When use _**node-mssql**_ implementations make sure [this commit](https://github.com/danbeck/node-mssql/commit/c6894ee97c452a2b69fe0610a953d210884eb6db#diff-740c6ca62b823be279cef39ece34cf7e) is in the source.
