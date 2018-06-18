@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "config": "^1.30.0",
+    "mssql": "^4.1.0",
     "tedious": "^2.6.1"
   }
 }

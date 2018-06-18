@@ -1,0 +1,9 @@
+{
+  "user": "user",
+  "password": "password",
+  "server": "server",
+  "options": {
+    "encrypt": false
+  },
+  "query": "SELECT * FROM DB.dbo.LargeTable WITH ( NOLOCK )"
+}
